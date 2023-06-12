@@ -9,7 +9,7 @@ services:
       ADMIN_PASWORD: "12345"
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile.dev
         #volumes:
         #- ./server:/home/steam/zrpocalipse
         #- ./config:/home/steam/Zomboid

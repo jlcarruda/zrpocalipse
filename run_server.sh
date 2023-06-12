@@ -156,7 +156,7 @@ function set_variables() {
     EDIT_CONFIG="/home/steam/edit_server_config.py"
     STEAM_INSTALL_FILE="/home/steam/install_server.scmd"
     BASE_GAME_DIR="/home/steam/zrpocalipse"
-    CONFIG_DIR="/home/steam/Zomboid"
+    CONFIG_DIR="/root/Zomboid"
 
     # Set the Server Admin Password variable
     ADMIN_USERNAME=${ADMIN_USERNAME:-"admin"}
@@ -170,8 +170,9 @@ function set_variables() {
     # Set the IP address variable
     # NOTE: Project Zomboid cannot handle the IN_ANY address
     if [[ -z "$BIND_IP" ]] || [[ "$BIND_IP" == "0.0.0.0" ]]; then
-        BIND_IP=($(hostname -I))
-        BIND_IP="${BIND_IP[0]}"
+        #BIND_IP=($(hostname -I))
+        #BIND_IP="${BIND_IP[0]}"
+        BIND_IP=$(curl ipconfig.me)
     else
         BIND_IP="$BIND_IP"
     fi
