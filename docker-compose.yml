@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  server:
+    hostname: base-server
+    stdin_open: true
+    tty: true
+    environment:
+      ADMIN_PASWORD: "12345"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./server:/home/steam/zrpocalipse
+      - ./config:/home/steam/Zomboid
