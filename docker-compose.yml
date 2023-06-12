@@ -10,6 +10,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    volumes:
-      - ./server:/home/steam/zrpocalipse
-      - ./config:/home/steam/Zomboid
+        #volumes:
+        #- ./server:/home/steam/zrpocalipse
+        #- ./config:/home/steam/Zomboid
