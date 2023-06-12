@@ -172,7 +172,7 @@ function set_variables() {
     if [[ -z "$BIND_IP" ]] || [[ "$BIND_IP" == "0.0.0.0" ]]; then
         #BIND_IP=($(hostname -I))
         #BIND_IP="${BIND_IP[0]}"
-        BIND_IP=$(curl ipconfig.me)
+        BIND_IP=$(curl ifconfig.me)
     else
         BIND_IP="$BIND_IP"
     fi
