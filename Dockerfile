@@ -11,3 +11,4 @@ EXPOSE 16261/udp
 EXPOSE 16262/udp
 
 ENTRYPOINT ["/bin/bash", "/home/steam/zrpocalipse/run_server.sh"]
+CMD ["-servername", "ZRPocalipse", "-ip", "0.0.0.0", "-nosteam", "-steamvac", "false"]
